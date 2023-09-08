@@ -463,9 +463,6 @@
     "version": "14.3.0",
     "location": {
       "$mid": 1,
-      "fsPath": "c:\\Users\\rober\\.vscode\\extensions\\eamodio.gitlens-14.3.0",
-      "_sep": 1,
-      "external": "file:///c%3A/Users/rober/.vscode/extensions/eamodio.gitlens-14.3.0",
       "path": "<path-to-extensions>/extensions/eamodio.gitlens-14.3.0",
       "scheme": "file"
     },
@@ -479,6 +476,52 @@
       "updated": true,
       "isPreReleaseVersion": false,
       "installedTimestamp": 1694205281105,
+      "preRelease": false
+    }
+  },
+  {
+    "identifier": {
+      "id": "wix.vscode-import-cost",
+      "uuid": "c46b0018-f317-4b6c-a785-d2039b27338f"
+    },
+    "version": "3.3.0",
+    "location": {
+      "$mid": 1,
+      "path": "<path-to-extensions>/extensions/wix.vscode-import-cost-3.3.0",
+      "scheme": "file"
+    },
+    "relativeLocation": "wix.vscode-import-cost-3.3.0",
+    "metadata": {
+      "id": "c46b0018-f317-4b6c-a785-d2039b27338f",
+      "publisherId": "7a344d8a-64ec-42a7-9255-9eacf94e746a",
+      "publisherDisplayName": "Wix",
+      "targetPlatform": "undefined",
+      "updated": false,
+      "isPreReleaseVersion": false,
+      "installedTimestamp": 1694209595522,
+      "preRelease": false
+    }
+  },
+  {
+    "identifier": {
+      "id": "cucumberopen.cucumber-official",
+      "uuid": "58a033a2-4aec-4019-9a58-d0b2bc632c80"
+    },
+    "version": "1.7.0",
+    "location": {
+      "$mid": 1,
+      "path": "<path-to-extensions>/extensions/cucumberopen.cucumber-official-1.7.0",
+      "scheme": "file"
+    },
+    "relativeLocation": "cucumberopen.cucumber-official-1.7.0",
+    "metadata": {
+      "id": "58a033a2-4aec-4019-9a58-d0b2bc632c80",
+      "publisherId": "1f54e298-cc6f-4adf-8f07-216f23ae8118",
+      "publisherDisplayName": "Cucumber",
+      "targetPlatform": "undefined",
+      "updated": false,
+      "isPreReleaseVersion": false,
+      "installedTimestamp": 1694209797040,
       "preRelease": false
     }
   }
