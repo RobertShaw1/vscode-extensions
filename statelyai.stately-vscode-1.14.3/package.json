@@ -1,0 +1,136 @@
+{
+	"name": "stately-vscode",
+	"displayName": "XState VSCode",
+	"description": "Visual editing, autocomplete and typegen for XState",
+	"license": "MIT",
+	"author": "Stately Team",
+	"version": "1.14.3",
+	"private": true,
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/statelyai/xstate-tools"
+	},
+	"bugs": {
+		"url": "https://github.com/statelyai/xstate-tools/issues"
+	},
+	"galleryBanner": {
+		"color": "#fff"
+	},
+	"icon": "media/icon.png",
+	"categories": [
+		"Linters",
+		"Visualization",
+		"Snippets",
+		"Other"
+	],
+	"keywords": [
+		"xstate",
+		"vscode",
+		"visualize",
+		"autocomplete",
+		"typescript",
+		"javascript"
+	],
+	"activationEvents": [
+		"onLanguage:typescript",
+		"onLanguage:typescriptreact",
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact"
+	],
+	"main": "./dist/index.js",
+	"publisher": "statelyai",
+	"contributes": {
+		"commands": [
+			{
+				"command": "stately-xstate.visualize",
+				"title": "Open Inspector",
+				"category": "XState"
+			},
+			{
+				"command": "stately-xstate.edit",
+				"title": "Open Visual Editor",
+				"category": "XState"
+			}
+		],
+		"configuration": {
+			"title": "XState",
+			"properties": {
+				"xstate.showVisualEditorWarnings": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show warnings that prevent you from using the visual editor."
+				},
+				"xstate.nestTypegenFiles": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable nesting the generated typegen files."
+				},
+				"xstate.useDeclarationFileForTypegenData": {
+					"type": "boolean",
+					"default": false,
+					"description": "Generate typegen data into `.d.ts` files and use this extension in the import's source that refers to it."
+				},
+				"xstate.theme": {
+					"type": "string",
+					"enum": [
+						"auto",
+						"dark",
+						"light"
+					],
+					"default": "auto",
+					"description": "Color theme for the visual editor. Auto syncs the VS Code theme with the editor theme."
+				},
+				"xstate.viewColumn": {
+					"type": "string",
+					"enum": [
+						"beside",
+						"active"
+					],
+					"default": "beside",
+					"description": "Target for opening the Visual Editor and Inspector. Beside opens in a group next to the current file, while active opens in the current group of the current file."
+				}
+			}
+		},
+		"snippets": [
+			{
+				"path": "snippets/xstate.code-snippets"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "tsc",
+		"test": "jest --passWithNoTests",
+		"webview:viz:build": "esbuild src/vizWebviewScript.ts --bundle --outfile=scripts/vizWebview.js",
+		"vscode:build": "esbuild --bundle --platform=\"node\" src/extension.ts --outfile=dist/index.js --external:vscode --format=cjs --sourcemap",
+		"vscode:build:dev": "yarn vscode:build --define:process.env.NODE_ENV=\\\"development\\\"",
+		"vscode:build:prod": "yarn vscode:build --define:process.env.NODE_ENV=\\\"production\\\""
+	},
+	"dependencies": {
+		"@types/lz-string": "^1.3.34",
+		"@xstate/inspect": "^0.4.1",
+		"@xstate/tools-shared": "^3.0.0",
+		"isomorphic-fetch": "^3.0.0",
+		"lz-string": "^1.4.4",
+		"vscode-languageclient": "^7.0.0",
+		"xstate": "^4.33.4"
+	},
+	"devDependencies": {
+		"@types/isomorphic-fetch": "^0.0.36",
+		"@types/vscode": "^1.52.0",
+		"vscode-test": "^1.3.0"
+	},
+	"__metadata": {
+		"id": "b34fd7d3-c0bc-493c-b90e-3246904ea27b",
+		"publisherId": "82371403-9ce3-4fe1-a7d0-fd4e26f5f8cf",
+		"publisherDisplayName": "Stately",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1694205235268,
+		"preRelease": false
+	}
+}
